@@ -333,40 +333,40 @@ function calculateFitness(board, numCleared){
                     coefficients[4] * firstHeight +
                     coefficients[5] * lastHeight +
                     coefficients[6] * numBlockades;
-    if (secondLevel) {
-        return fitness;
-    }
-    else {
-        secondLevel = true;
+//     if (secondLevel) {
+//         return fitness;
+//     }
+//     else {
+//         secondLevel = true;
 
-        var pieceName = nextPiece;
-        var pieceIDs = nameToIDMap[pieceName];
-        var bestID = pieceIDs[0], bestCol = 0, bestScore = -999999;
-        for (var i = 0; i < pieceIDs.length; i++) {
-            for (var j = 0; j <= BOARD_WIDTH - PIECES[pieceIDs[i]][0].length; j++) {
-                // copy board
-                var board2 = [];
-                for (var a = 0; a < board.length; a++) {
-                    var newRow = [];
-                    for (var b = 0; b < board[0].length; b++) {
-                        newRow.push(board[a][b]);
-                    }
-                    board2.push(newRow);
-                }
+//         var pieceName = nextPiece;
+//         var pieceIDs = nameToIDMap[pieceName];
+//         var bestID = pieceIDs[0], bestCol = 0, bestScore = -999999;
+//         for (var i = 0; i < pieceIDs.length; i++) {
+//             for (var j = 0; j <= BOARD_WIDTH - PIECES[pieceIDs[i]][0].length; j++) {
+//                 // copy board
+//                 var board2 = [];
+//                 for (var a = 0; a < board.length; a++) {
+//                     var newRow = [];
+//                     for (var b = 0; b < board[0].length; b++) {
+//                         newRow.push(board[a][b]);
+//                     }
+//                     board2.push(newRow);
+//                 }
 
-                if ( !dropPiece(board2, pieceIDs[i], j, 8) ) {
-                    continue;
-                }
-                var numCleared = removeClears(board2, true);
-                var score = calculateFitness(board2, numCleared);
-                if (score > bestScore) {
-                    bestScore = score;
-                }
-            }
-        }
+//                 if ( !dropPiece(board2, pieceIDs[i], j, 8) ) {
+//                     continue;
+//                 }
+//                 var numCleared = removeClears(board2, true);
+//                 var score = calculateFitness(board2, numCleared);
+//                 if (score > bestScore) {
+//                     bestScore = score;
+//                 }
+//             }
+//         }
 
-        return fitness + bestScore;
-    }
+        return fitness; // + bestScore;
+    //}
 }
 
 
