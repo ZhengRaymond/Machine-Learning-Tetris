@@ -11,7 +11,7 @@
 
 /**** CONSTANTS ****/
 var BOARD_WIDTH = 10; // Num of Columns
-var BOARD_HEIGHT = 20; // Number of Rows
+var BOARD_HEIGHT = 30; // Number of Rows
 var NUM_OF_COEFFICIENTS = 7; // Number of coefficients
 var NUM_EXTRA_PIECES = 0;
 var PIECES = [
