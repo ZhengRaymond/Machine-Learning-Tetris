@@ -1,3 +1,5 @@
+Project build history on https://github.com/ssundarr3/Machine-Learning-Tetris
+
 # Machine-Learning-Tetris
 A Machine Learning Algorithm that learns to play Tetris
 
